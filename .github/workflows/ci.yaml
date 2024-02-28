@@ -1,0 +1,23 @@
+name: CI
+on:
+    pull_request:
+        branches:
+            - "**"
+env:
+    SENTRYCLI_SKIP_DOWNLOAD: 1
+jobs:
+    PrettierAndLint:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - run: node -v && pnpm -v
+            - run: pnpm install --frozen-lockfile
+            - run: pnpm run prettier
+            - run: pnpm run lint
+    TestAndBuild:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - run: node -v && pnpm -v
+            - run: pnpm install --frozen-lockfile
+            - run: pnpm run build
