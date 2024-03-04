@@ -1,25 +1,13 @@
 {
     "$schema": "https://turborepo.org/schema.json",
     "pipeline": {
-        "local": {
-            "dependsOn": ["^build:pkg"]
-        },
-        "build:pkg": {
-            "dependsOn": ["^build:pkg"],
-            "outputs": ["dist/**"]
-        },
         "build": {
             "cache": false,
-            "dependsOn": ["^build:pkg"],
-            "outputs": ["dist/**", "next/**"]
+            "outputs": ["dist/**"]
         },
-        "start": {},
+        "test": {},
         "clean": {
             "cache": false
-        },
-        "lint": {},
-        "lint:fix": {},
-        "prettier": {},
-        "prettier:fix": {}
+        }
     }
 }
