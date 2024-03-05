@@ -15,8 +15,8 @@
         "prettier": "turbo run prettier",
         "prettier:fix": "turbo run prettier:fix",
         "clean": "turbo run clean && rm -rf ./node_modules && pnpm i",
-        "deploy:canary": "pnpm run build && changeset publish --no-git-tag",
-        "deploy": "pnpm run build && changeset publish"
+        "release:canary": "pnpm run build && changeset publish --no-git-tag",
+        "release": "pnpm run build && changeset publish"
     },
     "lint-staged": {
         "**/*.{json,yaml,md,ts,tsx,js,jsx}": "prettier --check",
