@@ -8,9 +8,8 @@
     "description": "ts-monorepo-template",
     "version": "0.0.0",
     "scripts": {
-        "local": "turbo run local",
-        "build": "turbo run build",
         "start": "turbo run start",
+        "build": "turbo run build",
         "lint": "turbo run lint",
         "lint:fix": "turbo run lint:fix",
         "prettier": "turbo run prettier",
