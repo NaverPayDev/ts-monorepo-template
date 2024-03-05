@@ -5,7 +5,7 @@
         "type": "git",
         "url": "https://github.com/NaverPayDev/ts-monorepo-template.git"
     },
-    "description": "pie-app-templates",
+    "description": "ts-monorepo-template",
     "version": "0.0.0",
     "scripts": {
         "local": "turbo run local",
