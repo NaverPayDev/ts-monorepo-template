@@ -12,7 +12,7 @@ jobs:
         steps:
             - run: npm i -g pnpm
             - run: node -v && pnpm -v
-            - uses: actions/checkout@v1
+            - uses: actions/checkout@v4
             - uses: andresz1/size-limit-action@v1
               with:
                   build_script: "build"
