@@ -27,7 +27,7 @@
     },
     "devDependencies": {
         "@changesets/cli": "^2.26.2",
-        "@naverpay/eslint-config": "^0.1.0",
+        "@naverpay/eslint-config": "^0.2.0",
         "@naverpay/markdown-lint": "^0.0.2",
         "@naverpay/prettier-config": "^0.0.2",
         "@size-limit/preset-big-lib": "^11.0.2",
