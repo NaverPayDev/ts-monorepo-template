@@ -10,6 +10,7 @@
     "scripts": {
         "start": "turbo run start",
         "build": "turbo run build",
+        "test": "turbo run test",
         "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
         "lint:fix": "pnpm run lint --fix",
         "prettier": "prettier --check '**/*.{json,yaml,md,ts,tsx,js,jsx}'",
