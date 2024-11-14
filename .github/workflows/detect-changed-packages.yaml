@@ -26,10 +26,12 @@ jobs:
               with:
                   node-version: '20.x'
 
+            - name: Enable corepack
+              run: corepack enable
+
             - name: setup pnpm and install dependencies
               uses: pnpm/action-setup@v3
               with:
-                  version: 9.1.1
                   run_install: true
 
             - name: install dependencies

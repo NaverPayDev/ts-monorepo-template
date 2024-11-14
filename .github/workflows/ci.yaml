@@ -9,9 +9,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
+            - name: Enable corepack
+              run: corepack enable
             - uses: pnpm/action-setup@v3
               with:
-                  version: 9.1.1
                   run_install: true
             - run: pnpm run prettier
             - run: pnpm run lint
@@ -21,8 +22,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
+            - name: Enable corepack
+              run: corepack enable
             - uses: pnpm/action-setup@v3
               with:
-                  version: 9.1.1
                   run_install: true
             - run: pnpm run test
