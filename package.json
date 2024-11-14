@@ -1,12 +1,20 @@
 {
     "name": "ts-monorepo-template",
     "author": "@NaverPayDev/frontend",
+    "private": true,
     "repository": {
         "type": "git",
         "url": "https://github.com/NaverPayDev/ts-monorepo-template.git"
     },
     "description": "ts-monorepo-template",
-    "version": "0.0.0",
+    "keywords": [
+        "naver",
+        "naver-financial",
+        "monorepo",
+        "monorepo-template",
+        "template",
+        "typescript"
+    ],
     "scripts": {
         "start": "turbo run start",
         "build": "turbo run build",
