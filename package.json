@@ -30,11 +30,9 @@
         "@naverpay/eslint-config": "^0.2.0",
         "@naverpay/markdown-lint": "^0.0.2",
         "@naverpay/prettier-config": "^0.0.2",
-        "@size-limit/preset-big-lib": "^11.0.2",
         "glob": "^9.3.4",
         "husky": "^8.0.3",
         "lint-staged": "^15.0.1",
-        "size-limit": "^11.0.2",
         "turbo": "^1.10.16",
         "typescript": "^5.2.2"
     },
