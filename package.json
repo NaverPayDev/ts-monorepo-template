@@ -30,7 +30,7 @@
         "@naverpay/eslint-config": "^1.0.7",
         "@naverpay/markdown-lint": "^0.0.3",
         "@naverpay/prettier-config": "^1.0.0",
-        "husky": "^9.1.6",
+        "lefthook": "^1.8.2",
         "lint-staged": "^15.2.10",
         "turbo": "^2.2.3",
         "typescript": "^5.6.3"
