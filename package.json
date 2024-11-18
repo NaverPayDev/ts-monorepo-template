@@ -1,12 +1,20 @@
 {
     "name": "ts-monorepo-template",
     "author": "@NaverPayDev/frontend",
+    "private": true,
     "repository": {
         "type": "git",
         "url": "https://github.com/NaverPayDev/ts-monorepo-template.git"
     },
     "description": "ts-monorepo-template",
-    "version": "0.0.0",
+    "keywords": [
+        "naver",
+        "naver-financial",
+        "monorepo",
+        "monorepo-template",
+        "template",
+        "typescript"
+    ],
     "scripts": {
         "start": "turbo run start",
         "build": "turbo run build",
@@ -26,17 +34,19 @@
         "**/*.{ts,tsx,js,jsx}": "eslint"
     },
     "devDependencies": {
-        "@changesets/cli": "^2.26.2",
-        "@naverpay/eslint-config": "^0.2.0",
-        "@naverpay/markdown-lint": "^0.0.2",
-        "@naverpay/prettier-config": "^0.0.2",
-        "@size-limit/preset-big-lib": "^11.0.2",
-        "glob": "^9.3.4",
-        "husky": "^8.0.3",
-        "lint-staged": "^15.0.1",
-        "size-limit": "^11.0.2",
-        "turbo": "^1.10.16",
-        "typescript": "^5.2.2"
+        "eslint": "^8.57.0",
+        "@changesets/cli": "^2.27.9",
+        "@naverpay/eslint-config": "^1.0.7",
+        "@naverpay/markdown-lint": "^0.0.3",
+        "@naverpay/prettier-config": "^1.0.0",
+        "lefthook": "^1.8.2",
+        "lint-staged": "^15.2.10",
+        "turbo": "^2.2.3",
+        "typescript": "^5.6.3"
     },
-    "packageManager": "pnpm@8.14.3"
+    "packageManager": "pnpm@9.12.3",
+    "engines": {
+        "node": "22.11.0",
+        "pnpm": "9.12.3"
+    }
 }
