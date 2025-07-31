@@ -1,0 +1,21 @@
+{
+    "name": "@naverpay/{{ name }}",
+    "version": "0.0.0",
+    "private": true,
+    "description": "{{ name }} integration for monorepo projects.",
+    "license": "MIT",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "scripts": {
+        "build": "tsc",
+        "clean": "git clean -xdf .cache .turbo dist node_modules",
+        "local": "tsc",
+        "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@naverpay/tsconfig": "workspace:*"
+    }
+}
