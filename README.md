@@ -19,8 +19,8 @@
 
 ## 사전 요구 사항
 
-- **Node.js**: 버전 `22.11.0`
-- **pnpm**: 버전 `9.12.3` (기본 패키지 매니저로 설정)
+- **Node.js**: 버전 `22.14.0`
+- **pnpm**: 버전 `10.13.1` (기본 패키지 매니저로 설정)
 
 환경 확인:
 
@@ -45,6 +45,40 @@ pnpm -v
    ```bash
    pnpm install
    ```
+
+---
+
+## Package 추가하기
+
+```bash
+
+> pnpm turbo gen init
+
+? What is the name of the package? (You can skip the `@naverpay/` prefix) random
+? Enter a space separated list of dependencies you would like to install react
+Scope: all 4 workspace projects
+Packages: +1
++
+Progress: resolved 679, reused 665, downloaded 0, added 0, done
+
+╭ Warning ──────────────────────────────────────────────────────────────────────────╮
+│                                                                                   │
+│   Ignored build scripts: core-js-pure.                                            │
+│   Run "pnpm approve-builds" to pick which dependencies should be allowed to run   │
+│   scripts.                                                                        │
+│                                                                                   │
+╰───────────────────────────────────────────────────────────────────────────────────╯
+
+Done in 950ms using pnpm v10.13.1
+>>> Changes made:
+  • Config sanitized (function)
+  • /packages/random/package.json (add)
+  • /packages/random/tsconfig.json (add)
+  • /packages/random/src/index.ts (add)
+  • /packages/random/package.json (modify)
+  • Package scaffolded (function)
+
+```
 
 ---
 
