@@ -34,19 +34,19 @@
         "**/*.{ts,tsx,js,jsx}": "eslint"
     },
     "devDependencies": {
-        "eslint": "^8.57.0",
-        "@changesets/cli": "^2.27.9",
-        "@naverpay/eslint-config": "^1.0.7",
-        "@naverpay/markdown-lint": "^0.0.3",
-        "@naverpay/prettier-config": "^1.0.0",
-        "lefthook": "^1.8.2",
-        "lint-staged": "^15.2.10",
-        "turbo": "^2.2.3",
-        "typescript": "^5.6.3"
+        "@changesets/cli": "^2.29.5",
+        "@naverpay/eslint-config": "^2.3.1",
+        "@naverpay/markdown-lint": "^1.0.0",
+        "@naverpay/prettier-config": "^1.0.1",
+        "eslint": "^9.32.0",
+        "lefthook": "^1.12.2",
+        "lint-staged": "^16.1.2",
+        "turbo": "^2.5.5",
+        "typescript": "^5.8.3"
     },
-    "packageManager": "pnpm@9.12.3",
+    "packageManager": "pnpm@10.13.1",
     "engines": {
-        "node": "22.11.0",
-        "pnpm": "9.12.3"
+        "node": "22.14.0",
+        "pnpm": "10.13.1"
     }
 }
