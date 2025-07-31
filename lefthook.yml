@@ -8,5 +8,5 @@ pre-commit:
             run: npx lint-staged
 commit-msg:
     scripts:
-        "commit-helper.sh":
+        'commit-helper.sh':
             runner: bash

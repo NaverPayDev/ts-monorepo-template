@@ -24,7 +24,7 @@ jobs:
             - name: Setup pnpm and install dependencies
               uses: ./tooling/github/setup
             - name: Lint
-              run: pnpm lint && pnpm lint:ws
+              run: pnpm lint && pnpm lint:fix
     format:
         runs-on: ubuntu-latest
         steps:
