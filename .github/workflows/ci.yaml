@@ -1,30 +1,47 @@
 name: CI
+
 on:
     pull_request:
-        branches:
-            - '**'
+        branches: ['*']
+    push:
+        branches: ['main']
+    merge_group:
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+env:
+    FORCE_COLOR: 3
+    TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+    TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
 
 jobs:
-    PrettierAndLint:
+    lint:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
-            - name: Enable corepack
-              run: corepack enable
-            - uses: pnpm/action-setup@v3
-              with:
-                  run_install: true
-            - run: pnpm run prettier
-            - run: pnpm run lint
-            - run: pnpm run markdownlint
+            - uses: actions/checkout@v4
+            - name: Setup pnpm and install dependencies
+              uses: ./tooling/github/setup
+            - name: Copy env
+              shell: bash
+              run: cp .env.example .env
+            - name: Lint
+              run: pnpm lint && pnpm lint:ws
+    format:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Setup pnpm and install dependencies
+              uses: ./tooling/github/setup
+            - name: Format
+              run: pnpm prettier
 
-    Test:
+    typecheck:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
-            - name: Enable corepack
-              run: corepack enable
-            - uses: pnpm/action-setup@v3
-              with:
-                  run_install: true
-            - run: pnpm run test
+            - uses: actions/checkout@v4
+            - name: Setup pnpm and install dependencies
+              uses: ./tooling/github/setup
+            - name: Typecheck
+              run: pnpm typecheck
