@@ -81,3 +81,5 @@ out/
 
 # telemetry disable 설정 릴리즈시점에 커밋에 섞여들어옴. 이를 방지하기 위함
 apps/web/cache/
+
+.cache

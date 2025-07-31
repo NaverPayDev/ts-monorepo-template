@@ -1,0 +1,6 @@
+{
+    "name": "@naverpay/github",
+    "version": "0.0.0",
+    "description": "A short description of the package.",
+    "type": "module"
+}

@@ -1,8 +1,8 @@
 {
-    "name": "@naverpay/random",
+    "name": "@naverpay/{{ name }}",
     "version": "0.0.0",
     "private": true,
-    "description": "random integration for monorepo projects.",
+    "description": "{{ name }} integration for monorepo projects.",
     "license": "MIT",
     "type": "module",
     "exports": {
@@ -14,9 +14,7 @@
         "local": "tsc",
         "typecheck": "tsc --noEmit --emitDeclarationOnly false"
     },
-    "dependencies": {
-        "react": "^19.1.1"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@naverpay/tsconfig": "workspace:*"
     }

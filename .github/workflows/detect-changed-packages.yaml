@@ -16,27 +16,14 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
         steps:
             - name: Checkout Repo
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
               with:
                   token: ${{ secrets.ACTION_TOKEN }}
                   fetch-depth: 0
-
-            - name: Use Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: '22.x'
-
             - name: Enable corepack
               run: corepack enable
-
-            - name: setup pnpm and install dependencies
-              uses: pnpm/action-setup@v3
-              with:
-                  run_install: true
-
-            - name: install dependencies
-              run: pnpm install --frozen-lockfile
-
+            - name: Setup pnpm and install dependencies
+              uses: ./tooling/github/setup
             - name: 'detect changed packages'
               uses: NaverPayDev/changeset-actions/detect-add@main
               with:

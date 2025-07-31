@@ -1,0 +1,10 @@
+{
+    "name": "@naverpay/tsconfig",
+    "version": "0.0.0",
+    "private": true,
+    "description": "Shared TypeScript config for naverpay projects.",
+    "type": "module",
+    "files": [
+        "*.json"
+    ]
+}
