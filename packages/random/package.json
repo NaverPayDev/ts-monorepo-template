@@ -1,16 +1,23 @@
 {
-    "name": "@dd/random",
-    "description": "모노레포 패키지 예제",
-    "sideEffects": false,
-    "version": "0.0.1",
-    "main": "./dist/index.js",
-    "files": [
-        "dist"
-    ],
-    "scripts": {
-        "build": "tsc --build",
-        "clean": "rm -rf dist"
+    "name": "@naverpay/random",
+    "version": "0.0.0",
+    "private": true,
+    "description": "random integration for monorepo projects.",
+    "license": "MIT",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.ts"
     },
-    "devDependencies": {},
-    "dependencies": {}
+    "scripts": {
+        "build": "tsc",
+        "clean": "git clean -xdf .cache .turbo dist node_modules",
+        "local": "tsc",
+        "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+    },
+    "dependencies": {
+        "react": "^19.1.1"
+    },
+    "devDependencies": {
+        "@naverpay/tsconfig": "workspace:*"
+    }
 }
